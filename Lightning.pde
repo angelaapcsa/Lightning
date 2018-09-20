@@ -1,5 +1,5 @@
 int startX = 0;
-int startY = 150;
+int startY = 0;
 int endX = 0;
 int endY = 150;
 
@@ -7,11 +7,11 @@ void setup()
 {
   size(300,300);
   background(255, 204, 0);
-  strokeWeight(2);
+  strokeWeight(1);
 }
 void draw()
 {
-	stroke(Math.random());
+	stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
   while (endX < 301){
     endX = startX + (int)(Math.random()*10);
     endY = startY + (int)(Math.random()*10);
@@ -23,7 +23,7 @@ void draw()
 void mousePressed()
 {
   startX = 0;
-  startY = 150;
+  startY = 0;
   endX = 0;
   endY = 150;
 }
