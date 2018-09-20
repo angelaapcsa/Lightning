@@ -15,7 +15,10 @@ void draw()
   while (endX < 301){
     endX = startX + (int)(Math.random()*10);
     endY = startY + (int)(Math.random()*10);
-  }
+    line(startX,startY,endX,endY);
+    startX = endX;
+    startY = endY;  
+}
 }
 void mousePressed()
 {
